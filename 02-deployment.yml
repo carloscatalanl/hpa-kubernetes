@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hpa
+  name: hpa # tag
 spec:
-  replicas: 3
+  replicas: 3 # defalut pods replicas
   selector:
     matchLabels:
-      app: hpa
+      app: hpa # tag
   template:
     metadata:
       labels:
-        app: hpa
+        app: hpa # tag
     spec:
       containers:
-      - name: hpa
-        image: k8s.gcr.io/hpa-example
+      - name: hpa # tag
+        image: k8s.gcr.io/hpa-example # Sum and print ok (CPU load)
         resources:
           requests:
             memory: "64Mi"
@@ -23,4 +23,4 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 80
+        - containerPort: 80 # <- 30000
