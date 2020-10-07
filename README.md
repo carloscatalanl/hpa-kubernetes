@@ -16,8 +16,6 @@ Metrics-Server (For Minikube):
 minikube addons enable metrics-server
 ```
 
-![](./images/metrics-server.png)
-
 ## Let's start
 
 Start Minikube: 
