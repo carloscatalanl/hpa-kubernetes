@@ -87,9 +87,7 @@ kubectl -n hpa-testing get all
 
 The numbers of pods are 1 (the minimum) and the CPU load are of 0%.
 
-Now, we need to generate traffic for increment CPU load.
-
-The 04-traffic-generator.sh is a bash script that curl the minikube ip in an infinite loop.
+Now, we need to generate traffic for increment CPU load. The 04-traffic-generator.sh is a bash script that curl the minikube ip in an infinite loop.
 
 So, in another terminal execute the traffic generator:
 
