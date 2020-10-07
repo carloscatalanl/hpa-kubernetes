@@ -11,12 +11,12 @@ Kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 Minikube: https://kubernetes.io/es/docs/tasks/tools/install-minikube/
 
-![](./images/metrics-server.png)
-
 Metrics-Server (For Minikube): 
 ```sh
 minikube addons enable metrics-server
 ```
+
+![](./images/metrics-server.png)
 
 ## Let's start
 
