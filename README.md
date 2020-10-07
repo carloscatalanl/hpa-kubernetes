@@ -1,7 +1,7 @@
 # HPA Kubernetes
 > Horizontal Pod Autoscaling for Kubernetes
 
-Generate traffic with bash script for create more pods with the HPA in a virtual cluster hpa-testing (namespace).
+The objective is generating traffic using bash scripts to create pods in a virtual cluster.
 
 ## Requirements
 
@@ -75,7 +75,7 @@ kubectl -n hpa-testing get all
 
 ![](./images/031.png)
 
-The HPA CPU initialization period default is 5 minutes.
+The default HPA CPU initialization period is 5 minutes.
  
 If you wait 5 minutes you can see this...
 
@@ -87,7 +87,7 @@ kubectl -n hpa-testing get all
 
 >The numbers of pods are 1 (the minimum) and the CPU load are of 0%.
 
-Now, we need to generate traffic for increment CPU load. 
+Now, we need to generate traffic to increase the CPU load.
 
 The 04-traffic-generator.sh is a bash script that curl the minikube ip in an infinite loop.
 
