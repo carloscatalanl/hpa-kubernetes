@@ -75,7 +75,7 @@ kubectl -n hpa-testing get all
 
 ![](./images/031.png)
 
-The HPA cpu initialization period default is 5 minutes.
+The HPA CPU initialization period default is 5 minutes.
  
 If you wait 5 minutes you can see this...
 
@@ -85,9 +85,11 @@ kubectl -n hpa-testing get all
 
 ![](./images/032.png)
 
-The numbers of pods are 1 (the minimum) and the CPU load are of 0%.
+>The numbers of pods are 1 (the minimum) and the CPU load are of 0%.
 
-Now, we need to generate traffic for increment CPU load. The 04-traffic-generator.sh is a bash script that curl the minikube ip in an infinite loop.
+Now, we need to generate traffic for increment CPU load. 
+
+The 04-traffic-generator.sh is a bash script that curl the minikube ip in an infinite loop.
 
 So, in another terminal execute the traffic generator:
 
@@ -109,5 +111,9 @@ kubectl -n hpa-testing get all
 
 ![](./images/05.png)
 
+>The number of pods has increased due to CPU load.
+
 You can stop the traffic generator pressing ctrl+c in the another terminal.
+
+You can immediately see how the CPU load decreases and in 5 minutes how the number of Pods decreases again to 1.
 
