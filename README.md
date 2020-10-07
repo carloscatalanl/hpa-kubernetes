@@ -67,7 +67,7 @@ Apply HPA (autoscaling):
 ```sh
 kubectl -n hpa-testing apply -f 03-hpa.yml
 ```
-Let's see pods, services and deployment and hpa:
+Let's see pods, services, deployment and hpa:
 
 ```sh
 kubectl -n hpa-testing get all
